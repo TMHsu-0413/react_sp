@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
-import imgKUS from '../images/homepage_kus.jpg'
 import {Link} from 'react-router-dom';
+import imgKUS from '../statics/images/homepage_kus.jpg'
 
 function PhotoItem(props : any){
     return(

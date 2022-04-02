@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import imgKUS from '../images/homepage_kus.jpg'
+import {Link} from 'react-router-dom';
 
 function PhotoItem(props : any){
     return(
@@ -12,9 +13,11 @@ function PhotoItem(props : any){
                 sx={ {borderRadius: '30%'}}
             />
             <CardContent>
+            <Link to={props.items.name}>
             <Typography gutterBottom variant="h5" component="div" align="center">
                 {props.items.name}
             </Typography>
+            </Link>
             <Typography variant="body2" color="text.secondary">
                 {props.items.desc}
             </Typography>
@@ -31,17 +34,17 @@ function HomepageBody(props : any){
     const profileList : any = [
         {
             photo: imgKUS,
-            name: "Khu Ûi-siông",
+            name: "Khu",
             desc: "Shut the fuck up."
         },
         {
             photo: imgKUS,
-            name: "Yee",
+            name: "Roy",
             desc: "toehdanohti"
         },
         {
             photo: imgKUS,
-            name: "Yee",
+            name: "Denny",
             desc: "toehdanohti"
         },
     ];

@@ -1,0 +1,58 @@
+import * as React from 'react';
+import { Box, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
+import imgKUS from '../images/homepage_kus.jpg'
+
+function PhotoItem(props : any){
+    return(
+        <Box sx={{maxWidth: "25%"}}>
+            <CardMedia
+                component="img"
+                alt="green iguana"
+                image={props.items.photo}
+                sx={ {borderRadius: '30%'}}
+            />
+            <CardContent>
+            <Typography gutterBottom variant="h5" component="div" align="center">
+                {props.items.name}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+                {props.items.desc}
+            </Typography>
+            </CardContent>
+        </Box>
+    )
+}
+
+function Item(props : any){
+
+}
+
+function HomepageBody(props : any){
+    const profileList : any = [
+        {
+            photo: imgKUS,
+            name: "Khu Ûi-siông",
+            desc: "Shut the fuck up."
+        },
+        {
+            photo: imgKUS,
+            name: "Yee",
+            desc: "toehdanohti"
+        },
+        {
+            photo: imgKUS,
+            name: "Yee",
+            desc: "toehdanohti"
+        },
+    ];
+    const showProfiles = profileList.map((profile : any) =>
+        <PhotoItem items={profile}></PhotoItem>
+    );
+    return(
+        <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginTop: '2%'}} >
+            {showProfiles}      
+        </Box>
+    );
+}
+
+export default HomepageBody;

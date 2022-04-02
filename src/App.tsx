@@ -1,5 +1,6 @@
 import React from "react";
 import Expenses from './components/Expenses'
+import {Button} from '@mui/material'
 
 function App() {
   const expenses = [
@@ -27,6 +28,9 @@ function App() {
     <div>
       <h2>Let's get started</h2>
       <Expenses items={expenses} />
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
     </div>
   );
 }

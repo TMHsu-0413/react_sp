@@ -1,21 +1,30 @@
 import React from "react";
-import {Button} from '@mui/material'
+import {Button, Paper} from '@mui/material'
 import HomepageBody from "./components/HomepageBody";
-import Roy_page from "./components/Roy_page/Roy_page";
-import Khu_page from "./components/Khu_page/Khu_page";
-import Denny_page from "./components/Denny_page/Denny_page";
+import RoyPage from "./components/RoyPage/RoyPage";
+import KusPage from "./components/KhuPage/KusPage";
+import DennyPage from "./components/DennyPage/DennyPage";
 import {Routes, Route} from "react-router-dom"
+import HomePageBg from "./statics/images/homepage_bg.jpg"
+
+const styles : any = {
+  paperContainer:{
+    backgroundImage: `url(%{HomePageBg})`
+  }
+};
 
 function App() {
   return (
     <div>
-      <h1>Members</h1>
-      <Routes>
-        <Route path="/" element={<HomepageBody />}></Route> 
-        <Route path="/Roy" element={<Roy_page />}></Route> 
-        <Route path="/Denny" element={<Denny_page />}></Route> 
-        <Route path="/Khu" element={<Khu_page />}></Route> 
-      </Routes>
+      <Paper style={styles.backgroundImage}>
+        <h1>Members</h1>
+        <Routes>
+          <Route path="/" element={<HomepageBody />}></Route> 
+          <Route path="/Roy" element={<RoyPage />}></Route> 
+          <Route path="/Denny" element={<DennyPage />}></Route> 
+          <Route path="/Khu" element={<KusPage />}></Route> 
+        </Routes>
+      </Paper>
     </div>
   );
 }

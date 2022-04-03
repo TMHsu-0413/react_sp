@@ -1,5 +1,6 @@
 import React from "react";
-import Expenses from './components/Expenses'
+import Expenses from './components/Expense/Expenses'
+import NewExpense from "./components/NewExpense/NewExpense";
 import {Button} from '@mui/material'
 
 function App() {
@@ -24,13 +25,14 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+  const addExpenseHandler = (expense:any) => {
+    console.log("in app.tsx");
+    console.log(expense);
+  }
   return (
     <div>
-      <h2>Let's get started</h2>
+      <NewExpense onAddExpenseData={addExpenseHandler} />
       <Expenses items={expenses} />
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
     </div>
   );
 }

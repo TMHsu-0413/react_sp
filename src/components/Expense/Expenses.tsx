@@ -16,9 +16,8 @@ function Expenses(props: any) {
           onChangeFilter={filterChangeHandler}
         />
         {props.items.map((expense: any) => { 
-          console.log(expense.title,expense.amount,expense.date);
-          
           return <ExpenseItem
+            key={expense.id}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}

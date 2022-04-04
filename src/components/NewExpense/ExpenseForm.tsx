@@ -58,6 +58,7 @@ const [userInput,setuserInput] = useState({
           enteredAmount: '',
           enteredDate: '',
       })
+      props.onAddExpense()
     //   console.log(expenseData);
       
   }
@@ -78,6 +79,7 @@ const [userInput,setuserInput] = useState({
         </div>
       </div>
       <div className="new-expense__actions">
+          <button type="button" onClick={props.onAddExpense}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>

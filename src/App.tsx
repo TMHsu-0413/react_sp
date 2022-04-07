@@ -9,7 +9,7 @@ import HomePageBg from "./statics/images/homepage_bg.jpg"
 
 const styles : any = {
   paperContainer:{
-    backgroundImage: `url(%{HomePageBg})`
+    backgroundImage: "url(&{HomePageBg})"
   }
 };
 
@@ -17,7 +17,6 @@ function App() {
   return (
     <div>
       <Paper style={styles.backgroundImage}>
-        <h1>Members</h1>
         <Routes>
           <Route path="/" element={<HomepageBody />}></Route> 
           <Route path="/Roy" element={<RoyPage />}></Route> 

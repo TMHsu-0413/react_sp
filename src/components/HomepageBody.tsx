@@ -52,9 +52,12 @@ function HomepageBody(props : any){
         <PhotoItem items={profile}></PhotoItem>
     );
     return(
-        <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginTop: '2%'}} >
-            {showProfiles}      
-        </Box>
+        <div>
+            <h1>Members</h1>
+            <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginTop: '2%'}} >
+                {showProfiles}      
+            </Box>
+        </div>
     );
 }
 

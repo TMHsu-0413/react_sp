@@ -53,7 +53,7 @@ function HomepageBody(props : any){
     );
     return(
         <div>
-            <h1>Members</h1>
+            <h1>成員 Members</h1>
             <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginTop: '2%'}} >
                 {showProfiles}      
             </Box>

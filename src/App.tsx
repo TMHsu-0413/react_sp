@@ -16,7 +16,7 @@ const styles : any = {
 const theme = createTheme({
   typography: {
     fontFamily: "'芫荽 0.94'", // 因為有空格 所以在CSS要有引號
-    fontSize: 12
+    fontSize: 16
   },
   components: {
     MuiCssBaseline: {
@@ -38,7 +38,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Typography fontFamily={'芫荽 0.94'}>SNTHU中文測試</Typography>
       <Paper style={styles.paperContainer } sx={{height : "100vh", fontFamily: '芫荽 0.94'}} >
         <Routes>
           <Route path="/" element={<HomepageBody />}></Route> 
